@@ -14,16 +14,18 @@ url: https://0x428a2f98.github.io/
   <title>0x428a2f98</title>
   <link rel="stylesheet" href="css/style.css">
 
+
+
 </head>
 
 
-<body>
+<body onload="initView()">
 
   <div class="container">
-
+    <span id="debug__span"></span>
     <h1 style="font-size: 20px; text-align: center;">0x428a2f98. this site is not tested to work in any browser.</h1>
 
-      <div class="tabs__links">
+      <div id="tabs__links" class="disabled">
         <a href="#content-1">Резюме hh.ru pdf</a>
         <a href="#content-2">Сопроводительное письмо</a>
       </div>
@@ -32,12 +34,12 @@ url: https://0x428a2f98.github.io/
     <div class="tabs">
       <div id="content-1">
 	<p align="center">
-        <iframe class="content" src="resumeSoftwareDeveloper.pdf#zoom=175"></iframe>
+        <iframe class="content" src="resumeSoftwareDeveloper.pdf#zoom=175" seamless onLoad="iframeDidLoad();"></iframe>
         </p>
       </div>
       <div id="content-2">
 	<p align="center">
-        <iframe class="content" src="coverLetter.pdf#zoom=175"></iframe>
+        <iframe class="content" src="coverLetter.pdf#zoom=175" seamless onLoad="iframeDidLoad();"></iframe>
 	</p>
       </div>
 
@@ -46,6 +48,19 @@ url: https://0x428a2f98.github.io/
 
   </div>
 
+<script>
+
+window.iframeLoaded = 0;
+
+function iframeDidLoad(){
+       window.iframeLoaded += 1;
+       document.getElementById("debug__span").innerHTML = iframeLoaded + " file loaded out of 2.";
+       if (iframeLoaded >= 2)
+	{
+	document.getElementById("tabs__links").className = "";
+	}
+    }
+</script>
 </body>
 
 </html>							
