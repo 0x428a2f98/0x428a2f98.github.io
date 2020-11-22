@@ -1,0 +1,27 @@
+  
+/*--
+Date: 11.22.2020
+--*/
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+  
+  text-align: center;
+}
+
+.content {
+  width: 60%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.tabs>div:not(.tabs__links) {
+  display: none;
+
+}
+
+.tabs>div:target {
+  display: block;
+}
