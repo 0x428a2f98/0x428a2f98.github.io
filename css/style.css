@@ -1,25 +1,24 @@
-  
 /*--
 Date: 11.22.2020
 --*/
 
 html,
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 100%;
-  
+
   text-align: center;
 }
 
-a.active {
+a.contentLINK.active {
   border-bottom: 2px solid black;
 }
 
-a:hover {
+a.contentLINK:hover {
   border-bottom: 2px solid grey;
 }
 
-a {
+a.contentLINK {
   background-color: white;
   color: black;
   border: 2px solid transparent;
@@ -29,25 +28,28 @@ a {
   display: inline-block;
 }
 
-.disabled
-{
+a.fileLINK {
+  display: block;
+}
+
+.disabled {
   pointer-events: none;
 
   /* for "disabled" effect */
   opacity: 0.5;
-  background: #CCC;
+  background: #ccc;
 }
 
 .content {
-  width: 80%;
-  height: 80vh;
+  width: 90%;
+  height: 75vh;
   margin: 0 auto;
 }
 
-.tabs>div {
+.tabs > div {
   display: none;
 }
 
-.tabs>div:target {
+.tabs > div:target {
   display: block;
 }
